@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import { entrar } from "../../controllers/authController";
 
+import "./Login.css";
+
 
 export default function Login() {
 
@@ -39,13 +41,13 @@ export default function Login() {
       ) {
 
         navigate(
-          "/dashboard-fornecedor"
+          "/inicio-fornecedor"
         );
 
       } else {
 
         navigate(
-          "/dashboard"
+          "/inicio"
         );
 
       }
@@ -69,69 +71,151 @@ export default function Login() {
 
   return (
 
-    <div>
+    <div className="login-page">
 
-      <h1>Celebra</h1>
-
-      <h2>Entrar</h2>
-
-      <p>
-        Acesse sua conta para
-        continuar.
-      </p>
+      <div className="login-container">
 
 
-      {erro && (
-        <p>
-          {erro}
+        {/* LOGO */}
+
+        <div className="login-logo">
+
+          <h1>
+            Celebra
+          </h1>
+
+          <span>
+            ✦
+          </span>
+
+        </div>
+
+
+        {/* CARD */}
+
+        <div className="login-card">
+
+          <div className="login-header">
+
+            <span>
+              BEM-VINDO DE VOLTA
+            </span>
+
+            <h2>
+              Entrar na sua conta
+            </h2>
+
+            <p>
+              Acesse sua conta para continuar
+              planejando momentos especiais.
+            </p>
+
+          </div>
+
+
+          {/* ERRO */}
+
+          {erro && (
+
+            <div className="login-erro">
+
+              {erro}
+
+            </div>
+
+          )}
+
+
+          {/* EMAIL */}
+
+          <div className="campo-login">
+
+            <label>
+              E-mail
+            </label>
+
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              value={email}
+              onChange={(e) =>
+                setEmail(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* SENHA */}
+
+          <div className="campo-login">
+
+            <label>
+              Senha
+            </label>
+
+            <input
+              type="password"
+              placeholder="Digite sua senha"
+              value={senha}
+              onChange={(e) =>
+                setSenha(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* BOTÃO */}
+
+          <button
+            className="botao-login"
+            onClick={acessar}
+            disabled={carregando}
+          >
+
+            {carregando
+              ? "Entrando..."
+              : "Entrar"}
+
+          </button>
+
+
+          {/* CADASTRO */}
+
+          <div className="login-cadastro">
+
+            <p>
+              Ainda não possui uma conta?
+            </p>
+
+            <button
+              onClick={() =>
+                navigate("/cadastro")
+              }
+            >
+              Criar conta
+            </button>
+
+          </div>
+
+          <button
+            className="login-voltar-apresentacao"
+            onClick={() =>
+              navigate("/")
+            }
+          >
+            Voltar para apresentação
+          </button>
+
+        </div>
+
+
+        <p className="login-rodape">
+          Planeje. Celebre. Viva momentos inesquecíveis.
         </p>
-      )}
 
-
-      <input
-        type="email"
-        placeholder="E-mail"
-        value={email}
-        onChange={(e) =>
-          setEmail(e.target.value)
-        }
-      />
-
-
-      <input
-        type="password"
-        placeholder="Senha"
-        value={senha}
-        onChange={(e) =>
-          setSenha(e.target.value)
-        }
-      />
-
-
-      <button
-        onClick={acessar}
-        disabled={carregando}
-      >
-
-        {carregando
-          ? "Entrando..."
-          : "Entrar"}
-
-      </button>
-
-
-      <p>
-        Ainda não possui uma conta?
-      </p>
-
-
-      <button
-        onClick={() =>
-          navigate("/cadastro")
-        }
-      >
-        Criar conta
-      </button>
+      </div>
 
     </div>
 

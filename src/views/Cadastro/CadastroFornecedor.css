@@ -1,0 +1,581 @@
+/* =========================================
+   PÁGINA
+========================================= */
+
+.cadastro-fornecedor-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(181, 137, 57, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(181, 137, 57, 0.08),
+      transparent 30%
+    ),
+    #0b0b0b;
+
+  color: #f5f1e8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  padding-bottom: 50px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.cadastro-fornecedor-header {
+  width: 100%;
+
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(11, 11, 11, 0.92);
+
+  border-bottom:
+    1px solid
+    rgba(201, 164, 91, 0.18);
+}
+
+
+.cadastro-fornecedor-header h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: #f2eee6;
+}
+
+
+.cadastro-fornecedor-header h1::before {
+  content: "✦";
+
+  color: #c9a45b;
+
+  font-size: 16px;
+
+  margin-right: 8px;
+}
+
+
+.cadastro-fornecedor-header button {
+  padding: 10px 18px;
+
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(201, 164, 91, 0.45);
+
+  border-radius: 7px;
+
+  color: #d8c18a;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+
+.cadastro-fornecedor-header button:hover {
+  background:
+    rgba(201, 164, 91, 0.1);
+
+  border-color: #c9a45b;
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.cadastro-fornecedor-main {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding:
+    60px
+    20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.cadastro-fornecedor-card {
+  width: 100%;
+  max-width: 850px;
+
+  padding: 48px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 30, 30, 0.98),
+      rgba(15, 15, 15, 0.98)
+    );
+
+  border:
+    1px solid
+    rgba(201, 164, 91, 0.3);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.cadastro-fornecedor-titulo {
+  text-align: center;
+
+  max-width: 550px;
+
+  margin:
+    0 auto
+    40px;
+}
+
+
+.cadastro-fornecedor-titulo span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #c9a45b;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+.cadastro-fornecedor-titulo h2 {
+  margin:
+    0
+    0
+    14px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+
+  color: #f3efe7;
+}
+
+
+.cadastro-fornecedor-titulo p {
+  margin: 0;
+
+  color: #9c9790;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   LINHA COM DOIS CAMPOS
+========================================= */
+
+.linha-fornecedor {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo-fornecedor {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+
+.campo-fornecedor label {
+  margin-bottom: 8px;
+
+  color: #d8d2c8;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+.campo-fornecedor input,
+.campo-fornecedor textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    14px
+    15px;
+
+  background:
+    rgba(10, 10, 10, 0.8);
+
+  border:
+    1px solid
+    #3b3936;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  outline: none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+
+.campo-fornecedor input {
+  height: 48px;
+}
+
+
+.campo-fornecedor textarea {
+  min-height: 120px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+.campo-fornecedor input::placeholder,
+.campo-fornecedor textarea::placeholder {
+  color: #6e6963;
+}
+
+
+.campo-fornecedor input:focus,
+.campo-fornecedor textarea:focus {
+  border-color: #c9a45b;
+
+  background: #111111;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(201, 164, 91, 0.1);
+}
+
+
+/* =========================================
+   ERRO
+========================================= */
+
+.cadastro-fornecedor-erro {
+  margin-bottom: 25px;
+
+  padding: 13px 15px;
+
+  background:
+    rgba(130, 35, 35, 0.18);
+
+  border:
+    1px solid
+    rgba(220, 80, 80, 0.4);
+
+  border-radius: 8px;
+
+  color: #f18b8b;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   BOTÃO PRINCIPAL
+========================================= */
+
+.botao-criar-fornecedor {
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d6b46c,
+      #b9924c
+    );
+
+  color: #17120b;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    filter 0.2s;
+}
+
+
+.botao-criar-fornecedor:hover:not(:disabled) {
+  transform:
+    translateY(-2px);
+
+  filter:
+    brightness(1.08);
+
+  box-shadow:
+    0 10px 25px
+    rgba(201, 164, 91, 0.2);
+}
+
+
+.botao-criar-fornecedor:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR
+========================================= */
+
+.botao-voltar-fornecedor {
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 14px;
+
+  background: transparent;
+
+  border:
+    1px solid
+    #3b3936;
+
+  border-radius: 8px;
+
+  color: #c5beb5;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+
+
+.botao-voltar-fornecedor:hover {
+  border-color: #c9a45b;
+
+  color: #d8c18a;
+
+  background:
+    rgba(201, 164, 91, 0.05);
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.fornecedor-login {
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  text-align: center;
+}
+
+
+.fornecedor-login p {
+  margin:
+    0
+    0
+    10px;
+
+  color: #96918a;
+
+  font-size: 13px;
+}
+
+
+.fornecedor-login button {
+  background: transparent;
+
+  border: none;
+
+  color: #c9a45b;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s;
+}
+
+
+.fornecedor-login button:hover {
+  color: #f0ce83;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 750px) {
+
+  .cadastro-fornecedor-header {
+    padding: 0 20px;
+  }
+
+
+  .cadastro-fornecedor-main {
+    padding:
+      40px
+      15px;
+  }
+
+
+  .cadastro-fornecedor-card {
+    padding: 32px 25px;
+  }
+
+
+  .linha-fornecedor {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .cadastro-fornecedor-titulo h2 {
+    font-size: 31px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .cadastro-fornecedor-header h1 {
+    font-size: 24px;
+  }
+
+
+  .cadastro-fornecedor-header button {
+    padding:
+      8px
+      12px;
+
+    font-size: 12px;
+  }
+
+
+  .cadastro-fornecedor-card {
+    padding:
+      28px
+      20px;
+  }
+
+
+  .cadastro-fornecedor-titulo h2 {
+    font-size: 27px;
+  }
+
+}

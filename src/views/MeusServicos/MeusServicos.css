@@ -1,0 +1,1068 @@
+/* =========================================
+   PÁGINA
+========================================= */
+
+.meus-servicos-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(183, 134, 55, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 40%,
+      rgba(183, 134, 55, 0.05),
+      transparent 25%
+    ),
+    #0d0d0d;
+
+  color: #f5f1e8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.meus-servicos-header {
+  width: 100%;
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0
+    8%;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid
+    rgba(201, 164, 93, 0.2);
+
+  background:
+    rgba(13, 13, 13, 0.92);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 10;
+}
+
+
+.servicos-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.servicos-logo h1 {
+  margin: 0;
+
+  color: #d6b56f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 28px;
+
+  letter-spacing: 1px;
+}
+
+
+.servicos-logo span {
+  color: #d6b56f;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   NAVEGAÇÃO
+========================================= */
+
+.servicos-nav {
+  display: flex;
+
+  gap: 28px;
+}
+
+
+.servicos-nav button {
+  background: transparent;
+
+  border: none;
+
+  color: #9d958d;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.servicos-nav button:hover {
+  color: #d6b56f;
+}
+
+
+.servicos-nav .nav-ativo {
+  color: #d6b56f;
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR
+========================================= */
+
+.botao-voltar-header {
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.45);
+
+  color: #e7d6ad;
+
+  padding:
+    10px
+    20px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.botao-voltar-header:hover {
+  background: #d6b56f;
+
+  color: #17120a;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.meus-servicos-main {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding:
+    75px
+    30px
+    100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.servicos-hero {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr
+    0.7fr;
+
+  gap: 70px;
+
+  align-items: center;
+
+  margin-bottom: 100px;
+}
+
+
+.servicos-tag {
+  display: inline-block;
+
+  color: #cba85f;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 22px;
+}
+
+
+.servicos-hero h2 {
+  margin:
+    0
+    0
+    20px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #f3ead8;
+}
+
+
+.servicos-hero h2 em {
+  color: #d6b56f;
+}
+
+
+.servicos-hero p {
+  max-width: 600px;
+
+  color: #aaa39b;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BOTÃO CADASTRAR
+========================================= */
+
+.botao-cadastrar-servico {
+  margin-top: 25px;
+
+  padding:
+    15px
+    25px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #d6b56f;
+
+  color: #17120a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.botao-cadastrar-servico:hover {
+  background: #ebcd8c;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0
+    10px
+    25px
+    rgba(214, 181, 111, 0.18);
+}
+
+
+/* =========================================
+   CARD RESUMO
+========================================= */
+
+.servicos-resumo-card {
+  padding: 30px;
+
+  background:
+    rgba(28, 24, 23, 0.95);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.25);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0
+    20px
+    60px
+    rgba(0, 0, 0, 0.4);
+}
+
+
+.resumo-servicos-titulo {
+  display: block;
+
+  color: #cba85f;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+
+.resumo-servico-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    18px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+
+.resumo-servico-item:last-child {
+  border-bottom: none;
+}
+
+
+.resumo-servico-icone {
+  width: 44px;
+
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border-radius: 9px;
+
+  font-size: 19px;
+}
+
+
+.resumo-servico-item strong {
+  display: block;
+
+  color: #eee5d8;
+
+  font-size: 20px;
+
+  margin-bottom: 4px;
+}
+
+
+.resumo-servico-item p {
+  margin: 0;
+
+  color: #89817a;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TOPO DA LISTA
+========================================= */
+
+.lista-servicos-topo {
+  display: flex;
+
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+
+.lista-servicos-topo > div:first-child > span {
+  color: #cba85f;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+
+.lista-servicos-topo h2 {
+  margin:
+    15px
+    0
+    10px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 38px;
+
+  font-weight: 400;
+
+  color: #f3ead8;
+}
+
+
+.lista-servicos-topo p {
+  margin: 0;
+
+  color: #99918a;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   QUANTIDADE
+========================================= */
+
+.quantidade-servicos {
+  min-width: 110px;
+
+  text-align: center;
+
+  padding:
+    18px
+    25px;
+
+  background:
+    rgba(214, 181, 111, 0.08);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.2);
+
+  border-radius: 10px;
+}
+
+
+.quantidade-servicos strong {
+  display: block;
+
+  color: #d6b56f;
+
+  font-size: 30px;
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+
+.quantidade-servicos span {
+  color: #99918a;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   GRID DE SERVIÇOS
+========================================= */
+
+.servicos-lista {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD SERVIÇO
+========================================= */
+
+.meu-servico-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 400px;
+
+  padding: 28px;
+
+  background:
+    rgba(28, 24, 23, 0.9);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 14px;
+
+  transition:
+    0.35s;
+
+  box-sizing: border-box;
+}
+
+
+.meu-servico-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(214, 181, 111, 0.4);
+
+  box-shadow:
+    0
+    20px
+    40px
+    rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   TOPO DO CARD
+========================================= */
+
+.servico-card-topo {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.servico-icone-grande {
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border-radius: 11px;
+
+  font-size: 25px;
+}
+
+
+.status-servico {
+  color: #b8d89d;
+
+  font-size: 12px;
+
+  background:
+    rgba(100, 150, 80, 0.1);
+
+  padding:
+    7px
+    10px;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================
+   CATEGORIA
+========================================= */
+
+.categoria-servico {
+  color: #cba85f;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   TEXTO CARD
+========================================= */
+
+.meu-servico-card h3 {
+  margin:
+    0
+    0
+    14px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+
+  color: #f3ead8;
+}
+
+
+.descricao-servico {
+  margin: 0;
+
+  color: #99918a;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  flex-grow: 1;
+}
+
+
+/* =========================================
+   PREÇO
+========================================= */
+
+.preco-servico {
+  margin:
+    25px
+    0;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+
+.preco-servico span {
+  display: block;
+
+  color: #77706a;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
+}
+
+
+.preco-servico strong {
+  color: #d6b56f;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   AÇÕES
+========================================= */
+
+.servico-acoes {
+  display: flex;
+
+  gap: 10px;
+}
+
+
+.botao-editar {
+  flex: 1;
+
+  border: none;
+
+  background: #d6b56f;
+
+  color: #17120a;
+
+  padding: 12px;
+
+  border-radius: 6px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.botao-editar:hover {
+  background: #ebcd8c;
+}
+
+
+.botao-excluir {
+  flex: 1;
+
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(180, 80, 80, 0.4);
+
+  color: #d88f8f;
+
+  padding: 12px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.botao-excluir:hover {
+  background:
+    rgba(160, 50, 50, 0.12);
+}
+
+
+/* =========================================
+   SEM SERVIÇOS
+========================================= */
+
+.sem-servicos {
+  text-align: center;
+
+  padding:
+    70px
+    30px;
+
+  background:
+    rgba(28, 24, 23, 0.8);
+
+  border:
+    1px dashed
+    rgba(214, 181, 111, 0.25);
+
+  border-radius: 14px;
+}
+
+
+.sem-servicos-icone {
+  font-size: 40px;
+
+  margin-bottom: 20px;
+}
+
+
+.sem-servicos h3 {
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  margin: 0 0 15px;
+}
+
+
+.sem-servicos p {
+  max-width: 450px;
+
+  margin:
+    0
+    auto
+    25px;
+
+  color: #99918a;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+.sem-servicos button {
+  border: none;
+
+  background: #d6b56f;
+
+  color: #17120a;
+
+  padding:
+    14px
+    22px;
+
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   DICA
+========================================= */
+
+.dica-servicos {
+  margin-top: 80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 45px;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(50, 40, 25, 0.8),
+      rgba(28, 24, 23, 0.8)
+    );
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.2);
+
+  border-radius: 16px;
+}
+
+
+.dica-servicos span {
+  color: #d6b56f;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  font-weight: bold;
+}
+
+
+.dica-servicos h2 {
+  margin:
+    15px
+    0;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+}
+
+
+.dica-servicos p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: #99918a;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+.dica-servicos button {
+  white-space: nowrap;
+
+  border: none;
+
+  background: #d6b56f;
+
+  color: #17120a;
+
+  padding:
+    15px
+    22px;
+
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.dica-servicos button:hover {
+  background: #ebcd8c;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.meus-servicos-footer {
+  text-align: center;
+
+  padding:
+    50px
+    20px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+
+.meus-servicos-footer h2 {
+  margin:
+    0
+    0
+    10px;
+
+  color: #d6b56f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 28px;
+}
+
+
+.meus-servicos-footer p {
+  margin:
+    0
+    0
+    20px;
+
+  color: #827a73;
+
+  font-size: 13px;
+}
+
+
+.meus-servicos-footer span {
+  color: #5f5954;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .servicos-hero {
+    grid-template-columns: 1fr;
+  }
+
+
+  .servicos-lista {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (
+  max-width: 700px
+) {
+
+  .meus-servicos-header {
+    padding:
+      0
+      20px;
+  }
+
+
+  .servicos-nav {
+    display: none;
+  }
+
+
+  .meus-servicos-main {
+    padding:
+      50px
+      20px
+      70px;
+  }
+
+
+  .servicos-hero {
+    margin-bottom: 70px;
+  }
+
+
+  .servicos-hero h2 {
+    font-size: 42px;
+  }
+
+
+  .lista-servicos-topo {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .dica-servicos {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 30px;
+  }
+
+
+  .dica-servicos button {
+    width: 100%;
+  }
+
+
+  .servico-acoes {
+    flex-direction: column;
+  }
+
+}

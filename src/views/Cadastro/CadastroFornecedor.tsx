@@ -3,158 +3,437 @@ import { useNavigate } from "react-router-dom";
 
 import { cadastrarFornecedor } from "../../controllers/authController";
 
+import "./CadastroFornecedor.css";
+
+
 export default function CadastroFornecedor() {
+
   const navigate = useNavigate();
 
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [confirmarSenha, setConfirmarSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] =
+    useState("");
 
-  const [nomeEmpresa, setNomeEmpresa] = useState("");
-  const [descricao, setDescricao] = useState("");
-  const [cidade, setCidade] = useState("");
-  const [endereco, setEndereco] = useState("");
-  const [faixaPreco, setFaixaPreco] = useState("");
+  const [nomeEmpresa, setNomeEmpresa] =
+    useState("");
 
-  const [erro, setErro] = useState("");
-  const [carregando, setCarregando] = useState(false);
+  const [descricao, setDescricao] =
+    useState("");
+
+  const [cidade, setCidade] =
+    useState("");
+
+  const [endereco, setEndereco] =
+    useState("");
+
+  const [faixaPreco, setFaixaPreco] =
+    useState("");
+
+  const [erro, setErro] =
+    useState("");
+
+  const [carregando, setCarregando] =
+    useState(false);
+
 
   async function realizarCadastro() {
+
     try {
+
       setErro("");
 
       if (senha !== confirmarSenha) {
-        throw new Error("As senhas não coincidem.");
+
+        throw new Error(
+          "As senhas não coincidem."
+        );
+
       }
 
       setCarregando(true);
 
       await cadastrarFornecedor({
+
         nome,
         telefone,
         email,
         senha,
-        nome_empresa: nomeEmpresa,
+
+        nome_empresa:
+          nomeEmpresa,
+
         descricao,
+
         cidade,
+
         endereco,
-        faixa_preco: faixaPreco
-          ? Number(faixaPreco)
-          : undefined,
+
+        faixa_preco:
+          faixaPreco
+            ? Number(faixaPreco)
+            : undefined,
+
       });
 
-      alert("Fornecedor cadastrado com sucesso!");
+
+      alert(
+        "Fornecedor cadastrado com sucesso!"
+      );
+
 
       navigate("/");
+
+
     } catch (error) {
+
       setErro(
         error instanceof Error
           ? error.message
           : "Erro ao realizar cadastro."
       );
+
     } finally {
+
       setCarregando(false);
+
     }
+
   }
 
+
   return (
-    <div>
-      <h1>Celebra</h1>
 
-      <h2>Cadastro de Fornecedor</h2>
+    <div className="cadastro-fornecedor-page">
 
-      <p>
-        Cadastre sua empresa para oferecer serviços
-        para eventos.
-      </p>
 
-      {erro && <p>{erro}</p>}
+      {/* HEADER */}
 
-      <input
-        type="text"
-        placeholder="Nome do responsável"
-        value={nome}
-        onChange={(e) => setNome(e.target.value)}
-      />
+      <header className="cadastro-fornecedor-header">
 
-      <input
-        type="text"
-        placeholder="Nome da empresa"
-        value={nomeEmpresa}
-        onChange={(e) => setNomeEmpresa(e.target.value)}
-      />
+        <h1>
+          Celebra
+        </h1>
 
-      <input
-        type="tel"
-        placeholder="Telefone"
-        value={telefone}
-        onChange={(e) => setTelefone(e.target.value)}
-      />
 
-      <input
-        type="email"
-        placeholder="E-mail"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <button
+          onClick={() =>
+            navigate("/")
+          }
+        >
+          Login
+        </button>
 
-      <input
-        type="text"
-        placeholder="Cidade"
-        value={cidade}
-        onChange={(e) => setCidade(e.target.value)}
-      />
+      </header>
 
-      <input
-        type="text"
-        placeholder="Endereço"
-        value={endereco}
-        onChange={(e) => setEndereco(e.target.value)}
-      />
 
-      <textarea
-        placeholder="Descrição da empresa ou serviços"
-        value={descricao}
-        onChange={(e) => setDescricao(e.target.value)}
-      />
+      <main className="cadastro-fornecedor-main">
 
-      <input
-        type="number"
-        placeholder="Faixa de preço"
-        value={faixaPreco}
-        onChange={(e) => setFaixaPreco(e.target.value)}
-      />
 
-      <input
-        type="password"
-        placeholder="Senha"
-        value={senha}
-        onChange={(e) => setSenha(e.target.value)}
-      />
+        <div className="cadastro-fornecedor-card">
 
-      <input
-        type="password"
-        placeholder="Confirmar senha"
-        value={confirmarSenha}
-        onChange={(e) =>
-          setConfirmarSenha(e.target.value)
-        }
-      />
 
-      <button
-        onClick={realizarCadastro}
-        disabled={carregando}
-      >
-        {carregando
-          ? "Cadastrando..."
-          : "Criar conta"}
-      </button>
+          {/* TÍTULO */}
 
-      <button onClick={() => navigate("/cadastro")}>
-        Voltar
-      </button>
+          <div className="cadastro-fornecedor-titulo">
+
+            <span>
+              CONTA DE FORNECEDOR
+            </span>
+
+
+            <h2>
+              Cadastre sua empresa
+            </h2>
+
+
+            <p>
+              Divulgue seus serviços e encontre
+              novos clientes para eventos.
+            </p>
+
+          </div>
+
+
+          {/* ERRO */}
+
+          {erro && (
+
+            <div className="cadastro-fornecedor-erro">
+
+              {erro}
+
+            </div>
+
+          )}
+
+
+          {/* RESPONSÁVEL */}
+
+          <div className="campo-fornecedor">
+
+            <label>
+              Nome do responsável
+            </label>
+
+            <input
+              type="text"
+              placeholder="Digite seu nome"
+              value={nome}
+              onChange={(e) =>
+                setNome(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* EMPRESA */}
+
+          <div className="campo-fornecedor">
+
+            <label>
+              Nome da empresa
+            </label>
+
+            <input
+              type="text"
+              placeholder="Nome da sua empresa"
+              value={nomeEmpresa}
+              onChange={(e) =>
+                setNomeEmpresa(
+                  e.target.value
+                )
+              }
+            />
+
+          </div>
+
+
+          {/* LINHA DE CAMPOS */}
+
+          <div className="linha-fornecedor">
+
+
+            <div className="campo-fornecedor">
+
+              <label>
+                Telefone
+              </label>
+
+              <input
+                type="tel"
+                placeholder="(00) 00000-0000"
+                value={telefone}
+                onChange={(e) =>
+                  setTelefone(
+                    e.target.value
+                  )
+                }
+              />
+
+            </div>
+
+
+            <div className="campo-fornecedor">
+
+              <label>
+                Cidade
+              </label>
+
+              <input
+                type="text"
+                placeholder="Sua cidade"
+                value={cidade}
+                onChange={(e) =>
+                  setCidade(
+                    e.target.value
+                  )
+                }
+              />
+
+            </div>
+
+          </div>
+
+
+          {/* EMAIL */}
+
+          <div className="campo-fornecedor">
+
+            <label>
+              E-mail
+            </label>
+
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              value={email}
+              onChange={(e) =>
+                setEmail(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* ENDEREÇO */}
+
+          <div className="campo-fornecedor">
+
+            <label>
+              Endereço
+            </label>
+
+            <input
+              type="text"
+              placeholder="Endereço da empresa"
+              value={endereco}
+              onChange={(e) =>
+                setEndereco(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* DESCRIÇÃO */}
+
+          <div className="campo-fornecedor">
+
+            <label>
+              Sobre sua empresa
+            </label>
+
+            <textarea
+              placeholder="Conte um pouco sobre sua empresa e seus serviços"
+              value={descricao}
+              onChange={(e) =>
+                setDescricao(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* FAIXA DE PREÇO */}
+
+          <div className="campo-fornecedor">
+
+            <label>
+              Faixa de preço inicial
+            </label>
+
+            <input
+              type="number"
+              placeholder="Exemplo: 1500"
+              value={faixaPreco}
+              onChange={(e) =>
+                setFaixaPreco(e.target.value)
+              }
+            />
+
+          </div>
+
+
+          {/* SENHAS */}
+
+          <div className="linha-fornecedor">
+
+
+            <div className="campo-fornecedor">
+
+              <label>
+                Senha
+              </label>
+
+              <input
+                type="password"
+                placeholder="Mínimo 6 caracteres"
+                value={senha}
+                onChange={(e) =>
+                  setSenha(e.target.value)
+                }
+              />
+
+            </div>
+
+
+            <div className="campo-fornecedor">
+
+              <label>
+                Confirmar senha
+              </label>
+
+              <input
+                type="password"
+                placeholder="Digite novamente"
+                value={confirmarSenha}
+                onChange={(e) =>
+                  setConfirmarSenha(
+                    e.target.value
+                  )
+                }
+              />
+
+            </div>
+
+          </div>
+
+
+          {/* BOTÃO PRINCIPAL */}
+
+          <button
+            className="botao-criar-fornecedor"
+            onClick={realizarCadastro}
+            disabled={carregando}
+          >
+
+            {carregando
+              ? "Criando conta..."
+              : "Criar minha conta"}
+
+          </button>
+
+
+          {/* VOLTAR */}
+
+          <button
+            className="botao-voltar-fornecedor"
+            onClick={() =>
+              navigate("/cadastro")
+            }
+          >
+            Voltar
+          </button>
+
+
+          <div className="fornecedor-login">
+
+            <p>
+              Já possui uma conta?
+            </p>
+
+
+            <button
+              onClick={() =>
+                navigate("/")
+              }
+            >
+              Entrar
+            </button>
+
+          </div>
+
+
+        </div>
+
+      </main>
+
     </div>
+
   );
+
 }

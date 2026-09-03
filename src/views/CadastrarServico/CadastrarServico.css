@@ -1,0 +1,1014 @@
+/* =========================================
+   PÁGINA
+========================================= */
+
+.cadastrar-servico-page {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(183, 134, 55, 0.12),
+      transparent 30%
+    ),
+    #0d0d0d;
+
+  color: #f5f1e8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  padding-bottom: 60px;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.cadastrar-servico-header {
+
+  width: 100%;
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    0
+    8%;
+
+  box-sizing:
+    border-box;
+
+  border-bottom:
+    1px solid
+    rgba(201, 164, 93, 0.2);
+
+  background:
+    rgba(13, 13, 13, 0.9);
+
+}
+
+
+.cadastrar-servico-header h1 {
+
+  margin: 0;
+
+  color:
+    #d6b56f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    28px;
+
+  letter-spacing:
+    1px;
+
+}
+
+
+.header-voltar-servico {
+
+  background:
+    transparent;
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.5);
+
+  color:
+    #e7d6ad;
+
+  padding:
+    10px
+    18px;
+
+  border-radius:
+    6px;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.3s;
+
+}
+
+
+.header-voltar-servico:hover {
+
+  background:
+    #d6b56f;
+
+  color:
+    #15120d;
+
+}
+
+
+.header-voltar-servico:disabled {
+
+  opacity:
+    0.5;
+
+  cursor:
+    not-allowed;
+
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.cadastrar-servico-main {
+
+  width:
+    100%;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  padding:
+    60px
+    20px;
+
+  box-sizing:
+    border-box;
+
+}
+
+
+.cadastrar-servico-container {
+
+  width:
+    100%;
+
+  max-width:
+    720px;
+
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.cadastrar-servico-titulo {
+
+  text-align:
+    center;
+
+  margin-bottom:
+    35px;
+
+}
+
+
+.cadastrar-servico-titulo span {
+
+  color:
+    #cba85f;
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    3px;
+
+  font-weight:
+    bold;
+
+}
+
+
+.cadastrar-servico-titulo h2 {
+
+  margin:
+    15px
+    0
+    12px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    42px;
+
+  font-style:
+    italic;
+
+  font-weight:
+    500;
+
+  color:
+    #f3ead8;
+
+}
+
+
+.cadastrar-servico-titulo p {
+
+  max-width:
+    550px;
+
+  margin:
+    auto;
+
+  color:
+    #a9a19a;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.cadastrar-servico-card {
+
+  width:
+    100%;
+
+  padding:
+    45px;
+
+  box-sizing:
+    border-box;
+
+  background:
+    rgba(28, 24, 23, 0.95);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.25);
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0
+    20px
+    60px
+    rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* =========================================
+   HEADER DO FORMULÁRIO
+========================================= */
+
+.formulario-header {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+
+  padding-bottom:
+    28px;
+
+  margin-bottom:
+    30px;
+
+  border-bottom:
+    1px solid
+    rgba(214, 181, 111, 0.15);
+
+}
+
+
+.formulario-icone {
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.25);
+
+  color:
+    #d6b56f;
+
+  font-size:
+    22px;
+
+}
+
+
+.formulario-header h3 {
+
+  margin:
+    0
+    0
+    6px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    23px;
+
+  font-weight:
+    500;
+
+  color:
+    #f3ead8;
+
+}
+
+
+.formulario-header p {
+
+  margin:
+    0;
+
+  color:
+    #8e8780;
+
+  font-size:
+    13px;
+
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo-servico {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    8px;
+
+  margin-bottom:
+    22px;
+
+}
+
+
+.campo-servico label {
+
+  color:
+    #d8cfc3;
+
+  font-size:
+    13px;
+
+  font-weight:
+    500;
+
+}
+
+
+.campo-servico input,
+.campo-servico select,
+.campo-servico textarea {
+
+  width:
+    100%;
+
+  box-sizing:
+    border-box;
+
+  padding:
+    14px
+    15px;
+
+  background:
+    #171515;
+
+  border:
+    1px solid
+    #3f3935;
+
+  border-radius:
+    7px;
+
+  color:
+    #f5f1e8;
+
+  outline:
+    none;
+
+  font-size:
+    14px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  transition:
+    0.25s;
+
+}
+
+
+.campo-servico input::placeholder,
+.campo-servico textarea::placeholder {
+
+  color:
+    #77706a;
+
+}
+
+
+.campo-servico input:focus,
+.campo-servico select:focus,
+.campo-servico textarea:focus {
+
+  border-color:
+    #d6b56f;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(214, 181, 111, 0.1);
+
+}
+
+
+.campo-servico select {
+
+  cursor:
+    pointer;
+
+}
+
+
+.campo-servico select option {
+
+  background:
+    #171515;
+
+  color:
+    #f5f1e8;
+
+}
+
+
+.campo-servico textarea {
+
+  min-height:
+    130px;
+
+  resize:
+    vertical;
+
+  line-height:
+    1.6;
+
+}
+
+
+.campo-servico small {
+
+  color:
+    #807871;
+
+  font-size:
+    12px;
+
+}
+
+
+/* =========================================
+   INPUT PREÇO
+========================================= */
+
+.preco-input {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  background:
+    #171515;
+
+  border:
+    1px solid
+    #3f3935;
+
+  border-radius:
+    7px;
+
+  overflow:
+    hidden;
+
+  transition:
+    0.25s;
+
+}
+
+
+.preco-input:focus-within {
+
+  border-color:
+    #d6b56f;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(214, 181, 111, 0.1);
+
+}
+
+
+.preco-input span {
+
+  padding:
+    14px
+    15px;
+
+  color:
+    #d6b56f;
+
+  font-weight:
+    bold;
+
+  border-right:
+    1px solid
+    #3f3935;
+
+}
+
+
+.preco-input input {
+
+  border:
+    none;
+
+  border-radius:
+    0;
+
+  box-shadow:
+    none;
+
+}
+
+
+.preco-input input:focus {
+
+  border:
+    none;
+
+  box-shadow:
+    none;
+
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.servico-status {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+
+  margin:
+    30px
+    0;
+
+  padding:
+    18px;
+
+  background:
+    rgba(214, 181, 111, 0.05);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.18);
+
+  border-radius:
+    10px;
+
+}
+
+
+.status-indicador {
+
+  width:
+    35px;
+
+  height:
+    35px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(214, 181, 111, 0.15);
+
+  color:
+    #d6b56f;
+
+  font-weight:
+    bold;
+
+}
+
+
+.servico-status strong {
+
+  display:
+    block;
+
+  color:
+    #e7d6ad;
+
+  font-size:
+    14px;
+
+  margin-bottom:
+    4px;
+
+}
+
+
+.servico-status p {
+
+  margin:
+    0;
+
+  color:
+    #918a82;
+
+  font-size:
+    12px;
+
+}
+
+
+/* =========================================
+   ERRO
+========================================= */
+
+.cadastrar-servico-erro {
+
+  background:
+    rgba(120, 35, 35, 0.2);
+
+  border:
+    1px solid
+    rgba(210, 80, 80, 0.5);
+
+  color:
+    #f28b8b;
+
+  padding:
+    13px;
+
+  border-radius:
+    7px;
+
+  font-size:
+    13px;
+
+  margin-bottom:
+    25px;
+
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.cadastrar-servico-botoes {
+
+  display:
+    flex;
+
+  gap:
+    15px;
+
+  margin-top:
+    30px;
+
+}
+
+
+.botao-cancelar-servico {
+
+  flex:
+    1;
+
+  padding:
+    15px;
+
+  background:
+    transparent;
+
+  border:
+    1px solid
+    #403a36;
+
+  border-radius:
+    7px;
+
+  color:
+    #c9c1b7;
+
+  font-size:
+    14px;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.3s;
+
+}
+
+
+.botao-cancelar-servico:hover {
+
+  border-color:
+    #d6b56f;
+
+  color:
+    #d6b56f;
+
+  background:
+    rgba(214, 181, 111, 0.05);
+
+}
+
+
+.botao-cadastrar-servico {
+
+  flex:
+    2;
+
+  padding:
+    15px;
+
+  border:
+    none;
+
+  border-radius:
+    7px;
+
+  background:
+    #d6b56f;
+
+  color:
+    #17120a;
+
+  font-weight:
+    bold;
+
+  font-size:
+    14px;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.3s;
+
+}
+
+
+.botao-cadastrar-servico:hover {
+
+  background:
+    #ebcd8c;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0
+    10px
+    25px
+    rgba(214, 181, 111, 0.18);
+
+}
+
+
+.botao-cadastrar-servico:disabled,
+.botao-cancelar-servico:disabled {
+
+  opacity:
+    0.6;
+
+  cursor:
+    not-allowed;
+
+  transform:
+    none;
+
+}
+
+
+/* =========================================
+   INFORMAÇÃO FINAL
+========================================= */
+
+.cadastrar-servico-info {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  margin-top:
+    25px;
+
+  color:
+    #807871;
+
+  font-size:
+    12px;
+
+}
+
+
+.cadastrar-servico-info span {
+
+  color:
+    #d6b56f;
+
+}
+
+
+.cadastrar-servico-info p {
+
+  margin:
+    0;
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .cadastrar-servico-header {
+
+    padding:
+      0
+      20px;
+
+  }
+
+
+  .cadastrar-servico-header h1 {
+
+    font-size:
+      24px;
+
+  }
+
+
+  .header-voltar-servico {
+
+    padding:
+      9px
+      12px;
+
+    font-size:
+      12px;
+
+  }
+
+
+  .cadastrar-servico-main {
+
+    padding:
+      40px
+      15px;
+
+  }
+
+
+  .cadastrar-servico-card {
+
+    padding:
+      28px
+      20px;
+
+  }
+
+
+  .cadastrar-servico-titulo h2 {
+
+    font-size:
+      32px;
+
+  }
+
+
+  .formulario-header {
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .cadastrar-servico-botoes {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .botao-cancelar-servico,
+  .botao-cadastrar-servico {
+
+    width:
+      100%;
+
+  }
+
+}
