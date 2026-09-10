@@ -1,0 +1,562 @@
+.meus-eventos-cliente-page {
+  min-height: 100vh;
+  background: #f8f5f2;
+  color: #292329;
+}
+
+
+.meus-eventos-cliente-header {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eee6e8;
+}
+
+
+.logo-celebra {
+  border: none;
+  background: transparent;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  color: #292329;
+  cursor: pointer;
+}
+
+
+.botao-voltar {
+  border: 1px solid #e2d8dc;
+  background: #ffffff;
+
+  padding: 10px 18px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: #51464d;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.botao-voltar:hover {
+  background: #f7f0f3;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.meus-eventos-cliente-main {
+  width: 86%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 55px 0 80px;
+}
+
+
+/* ==========================================
+   INTRO
+========================================== */
+
+.meus-eventos-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+
+.tag-eventos {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #a45b83;
+}
+
+
+.meus-eventos-intro h1 {
+  margin: 0 0 12px;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  color: #30282d;
+}
+
+
+.meus-eventos-intro p {
+  margin: 0;
+
+  max-width: 620px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #766d72;
+}
+
+
+/* ==========================================
+   BOTÃO CRIAR
+========================================== */
+
+.botao-criar-evento,
+.botao-principal {
+  border: none;
+
+  padding: 14px 23px;
+
+  border-radius: 12px;
+
+  background: #c982aa;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s;
+}
+
+
+.botao-criar-evento:hover,
+.botao-principal:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+
+/* ==========================================
+   RESUMO
+========================================== */
+
+.resumo-eventos {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+
+.resumo-card {
+  background: #ffffff;
+
+  border: 1px solid #eee5e8;
+
+  border-radius: 16px;
+
+  padding: 22px 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.resumo-card span {
+  font-size: 14px;
+  color: #81777d;
+}
+
+
+.resumo-card strong {
+  font-size: 29px;
+  color: #332a30;
+}
+
+
+/* ==========================================
+   LISTA
+========================================== */
+
+.lista-meus-eventos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.card-meu-evento {
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee5e8;
+
+  border-radius: 18px;
+
+  transition: 0.2s;
+}
+
+
+.card-meu-evento:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(60, 40, 50, 0.07);
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+.icone-evento {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #f8eaf1;
+
+  font-size: 25px;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.informacoes-evento {
+  min-width: 0;
+}
+
+
+.evento-linha-topo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+
+.tipo-evento,
+.status-evento {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.tipo-evento {
+  background: #f3edf0;
+  color: #74656d;
+}
+
+
+.status-evento {
+  background: #fff1dc;
+  color: #a06a22;
+}
+
+
+.status-confirmado {
+  background: #e6f4eb;
+  color: #34764d;
+}
+
+
+.status-cancelado {
+  background: #fae7e7;
+  color: #a74646;
+}
+
+
+.informacoes-evento h2 {
+  margin: 0 0 6px;
+
+  font-size: 21px;
+
+  color: #30282d;
+}
+
+
+.tema-evento {
+  margin: 0 0 13px;
+
+  font-size: 13px;
+
+  color: #82777d;
+}
+
+
+.detalhes-evento {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 13px 20px;
+
+  margin-bottom: 15px;
+}
+
+
+.detalhes-evento span {
+  font-size: 13px;
+
+  color: #71686d;
+}
+
+
+.orcamento-evento {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.orcamento-evento span {
+  font-size: 12px;
+
+  color: #92878d;
+}
+
+
+.orcamento-evento strong {
+  font-size: 14px;
+
+  color: #4d4148;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.acoes-evento {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 9px;
+}
+
+
+.botao-ver-evento {
+  border: none;
+
+  padding: 11px 17px;
+
+  border-radius: 10px;
+
+  background: #30282d;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+
+.botao-ver-evento:hover {
+  opacity: 0.9;
+}
+
+
+.botao-excluir-evento {
+  border: none;
+
+  background: transparent;
+
+  color: #a46a6a;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+
+.botao-excluir-evento:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   ESTADOS
+========================================== */
+
+.estado-eventos {
+  margin-top: 20px;
+
+  padding: 70px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #eee5e8;
+
+  border-radius: 20px;
+}
+
+
+.estado-icone {
+  font-size: 38px;
+
+  margin-bottom: 15px;
+}
+
+
+.estado-eventos h2 {
+  margin: 0 0 10px;
+
+  font-size: 23px;
+
+  color: #342b31;
+}
+
+
+.estado-eventos p {
+  margin: 0 auto 25px;
+
+  max-width: 500px;
+
+  line-height: 1.6;
+
+  color: #7b7076;
+}
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width: 800px) {
+
+  .meus-eventos-cliente-main {
+    width: 90%;
+    padding-top: 35px;
+  }
+
+
+  .meus-eventos-intro {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .meus-eventos-intro h1 {
+    font-size: 31px;
+  }
+
+
+  .resumo-eventos {
+    grid-template-columns: 1fr;
+  }
+
+
+  .card-meu-evento {
+    grid-template-columns: auto 1fr;
+  }
+
+
+  .acoes-evento {
+    grid-column: 1 / -1;
+
+    align-items: stretch;
+
+    flex-direction: row;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .meus-eventos-cliente-header {
+    padding: 0 5%;
+  }
+
+
+  .meus-eventos-intro h1 {
+    font-size: 27px;
+  }
+
+
+  .card-meu-evento {
+    grid-template-columns: 1fr;
+  }
+
+
+  .icone-evento {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .acoes-evento {
+    grid-column: auto;
+
+    flex-direction: column;
+  }
+
+
+  .detalhes-evento {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+}

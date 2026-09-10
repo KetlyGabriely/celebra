@@ -1,0 +1,752 @@
+* {
+  box-sizing: border-box;
+}
+
+.perfil-page {
+  min-height: 100vh;
+  background: #f7f4ef;
+  color: #382e29;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.perfil-header {
+  height: 76px;
+
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e7dfd7;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.perfil-logo {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 29px;
+
+  color: #3b3029;
+
+  cursor: pointer;
+}
+
+.perfil-nav {
+  display: flex;
+  gap: 7px;
+
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.perfil-nav button {
+  border: none;
+
+  background: transparent;
+
+  color: #756a62;
+
+  padding: 10px 14px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.perfil-nav button:hover {
+  background: #f0e9e2;
+
+  color: #3b3029;
+}
+
+.perfil-icone-header {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: 1px solid #ddd3ca;
+
+  background: #f5eee7;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.perfil-main {
+  width: min(1120px, 88%);
+
+  margin: 0 auto;
+
+  padding: 52px 0 70px;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.perfil-titulo {
+  margin-bottom: 38px;
+}
+
+.perfil-titulo span {
+  color: #9b806b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.perfil-titulo h1 {
+  margin: 10px 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 50px;
+
+  font-weight: 400;
+
+  color: #382e29;
+}
+
+.perfil-titulo p {
+  margin: 0;
+
+  color: #81766e;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   LAYOUT
+   ========================================= */
+
+.perfil-layout {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   CARD PRINCIPAL
+   ========================================= */
+
+.perfil-card-principal {
+  padding: 38px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6ded6;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px rgba(70, 55, 45, 0.04);
+
+  text-align: center;
+}
+
+.perfil-avatar {
+  width: 100px;
+  height: 100px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9dfd5;
+
+  color: #5b493d;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+}
+
+.perfil-card-principal h2 {
+  margin: 0 0 9px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+}
+
+.perfil-tipo {
+  display: inline-block;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  background: #f0e9e2;
+
+  color: #806b59;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.perfil-divisor {
+  height: 1px;
+
+  margin: 28px 0;
+
+  background: #eee8e2;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+   ========================================= */
+
+.perfil-informacoes {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  text-align: left;
+}
+
+.perfil-informacao {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.perfil-info-icone {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f3ece5;
+
+  color: #806b59;
+
+  font-size: 15px;
+}
+
+.perfil-informacao span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #9a9089;
+
+  font-size: 10px;
+}
+
+.perfil-informacao strong {
+  display: block;
+
+  color: #514841;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  word-break: break-word;
+}
+
+
+/* =========================================
+   BOTÃO EDITAR
+   ========================================= */
+
+.perfil-editar {
+  width: 100%;
+
+  margin-top: 30px;
+
+  padding: 13px;
+
+  border: 1px solid #d8cec4;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #5c4d43;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.perfil-editar:hover {
+  background: #f5eee8;
+}
+
+
+/* =========================================
+   LATERAL
+   ========================================= */
+
+.perfil-lateral {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.perfil-resumo,
+.perfil-atalhos {
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6ded6;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px rgba(70, 55, 45, 0.04);
+}
+
+
+/* =========================================
+   TÍTULOS DOS CARDS
+   ========================================= */
+
+.perfil-card-topo {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.perfil-card-topo span {
+  display: block;
+
+  color: #9b806b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 6px;
+}
+
+.perfil-card-topo h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+}
+
+.perfil-card-icone {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f3ece5;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   ESTATÍSTICAS
+   ========================================= */
+
+.perfil-estatisticas {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid #eee8e2;
+
+  padding-top: 20px;
+}
+
+.perfil-estatisticas > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.perfil-estatisticas > div + div {
+  border-left: 1px solid #eee8e2;
+
+  padding-left: 25px;
+}
+
+.perfil-estatisticas strong {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 29px;
+
+  font-weight: 400;
+
+  color: #4a3b32;
+}
+
+.perfil-estatisticas span {
+  color: #91867e;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ATALHOS
+   ========================================= */
+
+.perfil-atalhos {
+  flex: 1;
+}
+
+.perfil-atalhos button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 0;
+
+  border: none;
+
+  border-top: 1px solid #eee8e2;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.atalho-icone {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #f3ece5;
+}
+
+.perfil-atalhos button div {
+  flex: 1;
+}
+
+.perfil-atalhos button strong {
+  display: block;
+
+  color: #4b4039;
+
+  font-size: 12px;
+}
+
+.perfil-atalhos button small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9a9089;
+
+  font-size: 10px;
+}
+
+.atalho-seta {
+  color: #907966;
+
+  font-size: 17px;
+}
+
+.perfil-atalhos button:hover .atalho-seta {
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   SAIR
+   ========================================= */
+
+.perfil-sair {
+  margin-top: 20px;
+
+  padding: 25px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #eee7e0;
+
+  border-radius: 13px;
+}
+
+.perfil-sair span {
+  color: #9b806b;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.perfil-sair h3 {
+  margin: 7px 0 3px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+}
+
+.perfil-sair p {
+  margin: 0;
+
+  color: #81766e;
+
+  font-size: 11px;
+}
+
+.perfil-sair button {
+  flex-shrink: 0;
+
+  padding: 11px 17px;
+
+  border: 1px solid #cbbeb3;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #68574c;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.perfil-sair button:hover {
+  background: #e4dbd2;
+}
+
+
+/* =========================================
+   LOADING
+   ========================================= */
+
+.perfil-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.perfil-loading-icone {
+  font-size: 32px;
+
+  margin-bottom: 15px;
+}
+
+.perfil-loading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+.perfil-loading p {
+  color: #81766e;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ERRO
+   ========================================= */
+
+.perfil-erro {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.perfil-erro > div {
+  font-size: 30px;
+}
+
+.perfil-erro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+.perfil-erro p {
+  color: #81766e;
+
+  font-size: 13px;
+}
+
+.perfil-erro button {
+  margin-top: 10px;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4e4036;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .perfil-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-main {
+    width: 92%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .perfil-header {
+    height: auto;
+
+    padding: 14px 5%;
+
+    flex-wrap: wrap;
+  }
+
+  .perfil-nav {
+    order: 3;
+
+    width: 100%;
+
+    margin: 10px 0 0;
+
+    overflow-x: auto;
+  }
+
+  .perfil-nav button {
+    white-space: nowrap;
+  }
+
+  .perfil-titulo h1 {
+    font-size: 40px;
+  }
+
+  .perfil-card-principal,
+  .perfil-resumo,
+  .perfil-atalhos {
+    padding: 24px;
+  }
+
+  .perfil-sair {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .perfil-sair button {
+    width: 100%;
+  }
+
+}

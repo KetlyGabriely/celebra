@@ -1,5 +1,11 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+
+import {
+  useState,
+} from "react";
 
 import "./SelecionarServicos.css";
 
@@ -48,25 +54,49 @@ export default function SelecionarServicos() {
 
   const navigate = useNavigate();
 
-  const [servicosSelecionados, setServicosSelecionados] =
-    useState<string[]>([]);
+  const location = useLocation();
 
 
-  function selecionarServico(id: string) {
+  /* DADOS DO EVENTO */
 
-    if (servicosSelecionados.includes(id)) {
+  const {
+    orcamento,
+    convidados,
+    dataEvento,
+  } = location.state || {};
+
+
+  const [
+    servicosSelecionados,
+    setServicosSelecionados,
+  ] = useState<string[]>([]);
+
+
+  function selecionarServico(
+    id: string
+  ) {
+
+    if (
+      servicosSelecionados.includes(id)
+    ) {
 
       setServicosSelecionados(
+
         servicosSelecionados.filter(
-          (servico) => servico !== id
+          (servico) =>
+            servico !== id
         )
+
       );
 
     } else {
 
       setServicosSelecionados([
+
         ...servicosSelecionados,
+
         id,
+
       ]);
 
     }
@@ -76,7 +106,9 @@ export default function SelecionarServicos() {
 
   function continuar() {
 
-    if (servicosSelecionados.length === 0) {
+    if (
+      servicosSelecionados.length === 0
+    ) {
 
       alert(
         "Selecione pelo menos um serviço."
@@ -86,13 +118,32 @@ export default function SelecionarServicos() {
 
     }
 
+
     navigate(
+
       "/resultados",
+
       {
+
         state: {
+
+          /* DADOS DO EVENTO */
+
+          orcamento,
+
+          convidados,
+
+          dataEvento,
+
+
+          /* SERVIÇOS */
+
           servicosSelecionados,
+
         },
+
       }
+
     );
 
   }
@@ -116,7 +167,7 @@ export default function SelecionarServicos() {
             navigate("/inicio")
           }
         >
-            Início
+          ← Início
         </button>
 
       </header>
@@ -148,7 +199,7 @@ export default function SelecionarServicos() {
         </div>
 
 
-        {/* QUANTIDADE SELECIONADA */}
+        {/* CONTADOR */}
 
         <div className="contador-servicos">
 
@@ -157,10 +208,11 @@ export default function SelecionarServicos() {
           </strong>
 
           <span>
-            serviço
-            {servicosSelecionados.length !== 1
-              ? "s selecionados"
-              : " selecionado"}
+
+            {servicosSelecionados.length === 1
+              ? "serviço selecionado"
+              : "serviços selecionados"}
+
           </span>
 
         </div>
@@ -196,17 +248,23 @@ export default function SelecionarServicos() {
                 >
 
                   <div className="servico-icone">
+
                     {servico.icone}
+
                   </div>
 
 
                   <h3>
+
                     {servico.nome}
+
                   </h3>
 
 
                   <p>
+
                     {servico.preco}
+
                   </p>
 
 
@@ -240,7 +298,7 @@ export default function SelecionarServicos() {
               navigate("/montar-evento")
             }
           >
-            Voltar
+            ← Voltar
           </button>
 
 
@@ -248,10 +306,11 @@ export default function SelecionarServicos() {
             className="botao-continuar-servicos"
             onClick={continuar}
           >
-            Continuar
+            Continuar →
           </button>
 
         </div>
+
 
       </main>
 

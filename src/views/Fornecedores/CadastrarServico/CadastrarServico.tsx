@@ -7,11 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 import {
   criarServico,
-} from "../../controllers/servicoController";
+} from "../../../controllers/servicoController";
 
 import {
   buscarCategorias,
-} from "../../services/servicoService";
+} from "../../../services/servicoService";
 
 import "./CadastrarServico.css";
 

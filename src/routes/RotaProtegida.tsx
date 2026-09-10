@@ -76,7 +76,7 @@ export default function RotaProtegida({
 
     return (
       <Navigate
-        to="/"
+        to="/login"
         replace
       />
     );

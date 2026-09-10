@@ -1,0 +1,1040 @@
+/* =========================================
+   CELEBRA - DASHBOARD DO CLIENTE
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f4ef;
+  color: #2f2925;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* =========================================
+   PÁGINA
+   ========================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f7f4ef;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.dashboard-header {
+  height: 76px;
+  width: 100%;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e8e1d9;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.dashboard-logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 600;
+  color: #3b3029;
+  letter-spacing: -1px;
+}
+
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 28px;
+}
+
+.dashboard-nav button {
+  border: none;
+  background: transparent;
+  color: #746960;
+
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dashboard-nav button:hover {
+  background: #f4eee8;
+  color: #3b3029;
+}
+
+.dashboard-nav .nav-ativo {
+  background: #eee5dc;
+  color: #3b3029;
+  font-weight: 600;
+}
+
+.dashboard-perfil {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #ded5cc;
+  border-radius: 50%;
+
+  background: #f6f0ea;
+  color: #5e5148;
+
+  font-size: 17px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dashboard-perfil:hover {
+  background: #e9dfd5;
+}
+
+/* =========================================
+   CONTEÚDO
+   ========================================= */
+
+.dashboard-main {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+  padding: 48px 0 70px;
+}
+
+/* =========================================
+   BOAS-VINDAS
+   ========================================= */
+
+.dashboard-boas-vindas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-bottom: 34px;
+}
+
+.dashboard-boas-vindas span {
+  display: block;
+
+  color: #9b806b;
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+  margin-bottom: 12px;
+}
+
+.dashboard-boas-vindas h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 400;
+  line-height: 1.05;
+
+  color: #332a25;
+}
+
+.dashboard-boas-vindas p {
+  margin: 15px 0 0;
+
+  color: #796f68;
+  font-size: 15px;
+}
+
+.dashboard-criar {
+  border: none;
+  background: #4e4036;
+  color: white;
+
+  padding: 13px 20px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.dashboard-criar:hover {
+  background: #382e28;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   SELETOR DE EVENTO
+   ========================================= */
+
+.seletor-evento {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: white;
+  border: 1px solid #e5ddd5;
+  border-radius: 10px;
+
+  padding: 13px 17px;
+  margin-bottom: 22px;
+}
+
+.seletor-evento label {
+  color: #766a62;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.seletor-evento select {
+  min-width: 240px;
+
+  border: 1px solid #ddd3ca;
+  border-radius: 7px;
+
+  background: #faf8f5;
+  color: #3b3029;
+
+  padding: 9px 12px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+/* =========================================
+   EVENTO DESTAQUE
+   ========================================= */
+
+.evento-destaque {
+  min-height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 42px 48px;
+
+  border-radius: 18px;
+
+  background: #493b32;
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(67, 53, 43, 0.13);
+}
+
+.evento-destaque::before {
+  content: "";
+
+  position: absolute;
+  width: 330px;
+  height: 330px;
+
+  right: 120px;
+  top: -190px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.evento-destaque::after {
+  content: "";
+
+  position: absolute;
+  width: 240px;
+  height: 240px;
+
+  right: -80px;
+  bottom: -130px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.evento-destaque-conteudo {
+  position: relative;
+  z-index: 2;
+}
+
+.evento-tag {
+  display: inline-block;
+
+  padding: 6px 12px;
+  margin-bottom: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.evento-destaque h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.evento-informacoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-top: 20px;
+
+  color: #e9e1db;
+  font-size: 13px;
+}
+
+.evento-informacoes span {
+  white-space: nowrap;
+}
+
+.evento-destaque-botao {
+  margin-top: 27px;
+
+  padding: 11px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.evento-destaque-botao:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* =========================================
+   CONTADOR
+   ========================================= */
+
+.contador-evento {
+  width: 190px;
+  height: 190px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  position: relative;
+  z-index: 2;
+}
+
+.contador-evento span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #cfc2b8;
+}
+
+.contador-evento strong {
+  margin: 4px 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 54px;
+  font-weight: 400;
+
+  color: #ffffff;
+  line-height: 1;
+}
+
+.contador-evento small {
+  color: #cfc2b8;
+  font-size: 12px;
+}
+
+/* =========================================
+   RESUMO
+   ========================================= */
+
+.dashboard-resumo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+
+  margin: 22px 0;
+}
+
+.resumo-dashboard-card {
+  min-height: 150px;
+
+  padding: 21px;
+
+  background: white;
+  border: 1px solid #e8e0d8;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(72, 58, 48, 0.035);
+
+  position: relative;
+}
+
+.resumo-icone {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 9px;
+
+  background: #f3ece5;
+  color: #806b59;
+
+  font-size: 17px;
+}
+
+.resumo-dashboard-card > span {
+  display: block;
+
+  color: #81766e;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.resumo-dashboard-card strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #352c27;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.resumo-dashboard-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #a0968f;
+  font-size: 11px;
+}
+
+/* =========================================
+   GRID PRINCIPAL
+   ========================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.dashboard-card {
+  background: white;
+
+  border: 1px solid #e8e0d8;
+  border-radius: 14px;
+
+  padding: 28px;
+
+  box-shadow: 0 4px 18px rgba(72, 58, 48, 0.035);
+}
+
+.card-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 24px;
+}
+
+.card-titulo span {
+  display: block;
+
+  color: #a0836d;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.card-titulo h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+
+  color: #382e29;
+}
+
+.card-icone {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+  background: #f3ece5;
+
+  font-size: 17px;
+}
+
+/* =========================================
+   ORÇAMENTO
+   ========================================= */
+
+.orcamento-principal strong {
+  display: block;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+
+  color: #382e29;
+}
+
+.orcamento-principal span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #91867e;
+  font-size: 12px;
+}
+
+.barra-orcamento {
+  width: 100%;
+  height: 7px;
+
+  margin-top: 24px;
+
+  border-radius: 20px;
+
+  background: #eee8e2;
+  overflow: hidden;
+}
+
+.barra-orcamento div {
+  width: 0%;
+  height: 100%;
+
+  border-radius: 20px;
+
+  background: #8f765f;
+}
+
+.orcamento-legenda {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  color: #978c84;
+  font-size: 11px;
+}
+
+/* =========================================
+   CHECKLIST
+   ========================================= */
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 9px 0;
+
+  border-bottom: 1px solid #f0ebe6;
+
+  color: #5e554f;
+  font-size: 13px;
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #cfc3b9;
+  border-radius: 5px;
+
+  color: #9d8977;
+}
+
+/* =========================================
+   PRÓXIMOS PASSOS
+   ========================================= */
+
+.proximos-passos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.passo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.passo-numero {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eee5dc;
+  color: #6e5b4d;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.passo-item strong {
+  display: block;
+
+  color: #4a403a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.passo-item p {
+  margin: 4px 0 0;
+
+  color: #938982;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* =========================================
+   DETALHES
+   ========================================= */
+
+.detalhes-dashboard {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 22px;
+}
+
+.detalhes-dashboard > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #f0ebe6;
+}
+
+.detalhes-dashboard > div:last-child {
+  border-bottom: none;
+}
+
+.detalhes-dashboard span {
+  color: #9a9089;
+  font-size: 12px;
+}
+
+.detalhes-dashboard strong {
+  color: #514841;
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+/* =========================================
+   LINKS DOS CARDS
+   ========================================= */
+
+.card-link {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #806b59;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.card-link:hover {
+  color: #493b32;
+}
+
+/* =========================================
+   CTA FINAL
+   ========================================= */
+
+.dashboard-final {
+  margin-top: 22px;
+
+  padding: 35px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-radius: 14px;
+
+  background: #e9dfd5;
+}
+
+.dashboard-final span {
+  color: #927762;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.dashboard-final h2 {
+  margin: 8px 0 4px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 400;
+
+  color: #3e342e;
+}
+
+.dashboard-final p {
+  margin: 0;
+
+  color: #756a62;
+  font-size: 13px;
+}
+
+.dashboard-final button {
+  border: none;
+
+  padding: 13px 19px;
+
+  border-radius: 7px;
+
+  background: #4e4036;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.dashboard-final button:hover {
+  background: #382e28;
+}
+
+/* =========================================
+   LOADING
+   ========================================= */
+
+.dashboard-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f4ef;
+}
+
+.loading-icone {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.dashboard-loading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.dashboard-loading p {
+  color: #8c8179;
+  font-size: 14px;
+}
+
+/* =========================================
+   SEM EVENTO
+   ========================================= */
+
+.dashboard-sem-evento,
+.dashboard-vazio {
+  min-height: 65vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.sem-evento-icone {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eee5dc;
+
+  font-size: 28px;
+
+  margin-bottom: 22px;
+}
+
+.dashboard-sem-evento > span {
+  color: #9b806b;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.dashboard-sem-evento h1,
+.dashboard-vazio h2 {
+  margin: 12px 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+
+  color: #382e29;
+}
+
+.dashboard-sem-evento p,
+.dashboard-vazio p {
+  max-width: 500px;
+
+  color: #81766e;
+  font-size: 14px;
+  line-height: 1.5;
+
+  margin-bottom: 24px;
+}
+
+.dashboard-botao-principal {
+  border: none;
+
+  padding: 14px 22px;
+
+  border-radius: 8px;
+
+  background: #4e4036;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 900px) {
+  .dashboard-main {
+    width: 92%;
+  }
+
+  .dashboard-header {
+    padding: 0 4%;
+  }
+
+  .dashboard-resumo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .evento-destaque {
+    padding: 35px;
+  }
+
+  .contador-evento {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contador-evento strong {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-header {
+    height: auto;
+    min-height: 70px;
+
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 14px 5%;
+  }
+
+  .dashboard-nav {
+    order: 3;
+
+    width: 100%;
+
+    margin: 0;
+
+    overflow-x: auto;
+  }
+
+  .dashboard-nav button {
+    white-space: nowrap;
+  }
+
+  .dashboard-boas-vindas {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-boas-vindas h1 {
+    font-size: 40px;
+  }
+
+  .evento-destaque {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contador-evento {
+    align-self: center;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-final {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-main {
+    padding-top: 30px;
+  }
+
+  .dashboard-resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .evento-destaque {
+    padding: 28px 24px;
+  }
+
+  .evento-destaque h2 {
+    font-size: 32px;
+  }
+
+  .evento-informacoes {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .dashboard-card {
+    padding: 22px;
+  }
+
+  .dashboard-final {
+    padding: 28px 24px;
+  }
+
+  .seletor-evento {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seletor-evento select {
+    width: 100%;
+    min-width: 0;
+  }
+}

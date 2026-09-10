@@ -1153,37 +1153,6 @@ export default function PaginaApresentacao() {
         </p>
 
 
-        <div className="footer-links">
-
-          <button
-            onClick={() =>
-              scrollPara("como-funciona")
-            }
-          >
-            Como funciona
-          </button>
-
-
-          <button
-            onClick={() =>
-              scrollPara("organizadores")
-            }
-          >
-            Organizadores
-          </button>
-
-
-          <button
-            onClick={() =>
-              scrollPara("profissionais")
-            }
-          >
-            Profissionais
-          </button>
-
-        </div>
-
-
         <small>
           © 2026 Celebra. Todos os direitos reservados.
         </small>

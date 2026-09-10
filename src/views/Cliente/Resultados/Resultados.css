@@ -1,0 +1,865 @@
+/* =========================================
+   PÁGINA
+========================================= */
+
+.resultados {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(183, 134, 55, 0.12),
+      transparent 30%
+    ),
+    #0d0d0d;
+
+  color: #f5f1e8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  padding-bottom: 60px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.resultados-header {
+  width: 100%;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0
+    8%;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid
+    rgba(201, 164, 93, 0.2);
+
+  background:
+    rgba(13, 13, 13, 0.9);
+}
+
+
+.resultados-header h1 {
+  margin: 0;
+
+  color: #d6b56f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 28px;
+
+  letter-spacing: 1px;
+}
+
+
+.resultados-header button {
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.5);
+
+  color: #e7d6ad;
+
+  padding:
+    10px
+    18px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.resultados-header button:hover {
+  background: #d6b56f;
+
+  color: #15120d;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.resultados-main {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding:
+    70px
+    25px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.resultados-titulo {
+  max-width: 700px;
+
+  margin-bottom: 55px;
+}
+
+
+.resultados-titulo > span {
+  color: #cba85f;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+
+.resultados-titulo h2 {
+  margin:
+    15px
+    0;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 48px;
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  color: #f3ead8;
+}
+
+
+.resultados-titulo p {
+  max-width: 580px;
+
+  margin: 0;
+
+  color: #a9a19a;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   RESUMO DO EVENTO
+========================================= */
+
+.resumo-evento {
+  padding: 35px;
+
+  margin-bottom: 65px;
+
+  background:
+    rgba(28, 24, 23, 0.95);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.25);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0
+    20px
+    60px
+    rgba(0, 0, 0, 0.3);
+}
+
+
+.resumo-titulo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.resumo-titulo > div > span {
+  color: #cba85f;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+
+.resumo-titulo h2 {
+  margin:
+    10px
+    0
+    0;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  color: #f3ead8;
+}
+
+
+.resumo-icone {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.3);
+
+  color: #d6b56f;
+
+  font-size: 24px;
+}
+
+
+/* =========================================
+   GRID DO RESUMO
+========================================= */
+
+.resumo-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.resumo-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 22px;
+
+  background: #171515;
+
+  border:
+    1px solid
+    #3f3935;
+
+  border-radius: 10px;
+}
+
+
+.resumo-item-icone {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border-radius: 8px;
+
+  font-size: 22px;
+}
+
+
+.resumo-item div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.resumo-item small {
+  color: #8e8780;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+
+.resumo-item strong {
+  color: #f3ead8;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   SERVIÇOS ESCOLHIDOS
+========================================= */
+
+.servicos-escolhidos {
+  margin-bottom: 70px;
+}
+
+
+.servicos-escolhidos-titulo {
+  margin-bottom: 30px;
+}
+
+
+.servicos-escolhidos-titulo > span {
+  color: #cba85f;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+
+.servicos-escolhidos-titulo h2 {
+  margin:
+    12px
+    0;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 500;
+
+  color: #f3ead8;
+}
+
+
+.servicos-escolhidos-titulo p {
+  color: #a9a19a;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   GRID DE SERVIÇOS
+========================================= */
+
+.servicos-escolhidos-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+
+.servico-escolhido-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 22px;
+
+  position: relative;
+
+  background:
+    rgba(28, 24, 23, 0.95);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.18);
+
+  border-radius: 12px;
+
+  transition:
+    0.3s;
+}
+
+
+.servico-escolhido-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(214, 181, 111, 0.5);
+
+  box-shadow:
+    0
+    15px
+    35px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+.servico-escolhido-icone {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border-radius: 10px;
+
+  font-size: 25px;
+}
+
+
+.servico-escolhido-card h3 {
+  margin:
+    0
+    0
+    7px;
+
+  color: #f3ead8;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.servico-escolhido-card p {
+  margin: 0;
+
+  color: #8e8780;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.servico-check {
+  margin-left: auto;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d6b56f;
+
+  color: #17120a;
+
+  font-weight: bold;
+}
+
+
+/* =========================================
+   PRÓXIMO PASSO
+========================================= */
+
+.proximo-passo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(214, 181, 111, 0.12),
+      rgba(28, 24, 23, 0.95)
+    );
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.3);
+
+  border-radius: 16px;
+}
+
+
+.proximo-conteudo {
+  max-width: 600px;
+}
+
+
+.proximo-conteudo > span {
+  color: #d6b56f;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+
+.proximo-conteudo h2 {
+  margin:
+    14px
+    0;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  color: #f3ead8;
+}
+
+
+.proximo-conteudo p {
+  margin: 0;
+
+  color: #aaa198;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.proximo-acoes {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  min-width: 220px;
+}
+
+
+.botao-editar-evento {
+  padding:
+    13px
+    18px;
+
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.4);
+
+  border-radius: 7px;
+
+  color: #d6b56f;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.botao-editar-evento:hover {
+  background:
+    rgba(214, 181, 111, 0.08);
+}
+
+
+.botao-buscar-fornecedores {
+  padding:
+    14px
+    20px;
+
+  background: #d6b56f;
+
+  border: none;
+
+  border-radius: 7px;
+
+  color: #17120a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.botao-buscar-fornecedores:hover {
+  background: #ebcd8c;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0
+    10px
+    25px
+    rgba(214, 181, 111, 0.2);
+}
+
+
+/* =========================================
+   FINALIZAR DEPOIS
+========================================= */
+
+.resultados-finalizar {
+  text-align: center;
+
+  margin-top: 35px;
+}
+
+
+.resultados-finalizar button {
+  background: transparent;
+
+  border: none;
+
+  color: #8e8780;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    0.3s;
+}
+
+
+.resultados-finalizar button:hover {
+  color: #d6b56f;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   EVENTO NÃO ENCONTRADO
+========================================= */
+
+.resultados-vazio {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+
+.resultados-vazio > span {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border-radius: 50%;
+
+  color: #d6b56f;
+
+  font-size: 30px;
+}
+
+
+.resultados-vazio h2 {
+  margin: 0 0 12px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 500;
+}
+
+
+.resultados-vazio p {
+  max-width: 420px;
+
+  color: #a9a19a;
+
+  line-height: 1.6;
+}
+
+
+.resultados-vazio button {
+  margin-top: 20px;
+
+  padding:
+    14px
+    22px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #d6b56f;
+
+  color: #17120a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (
+  max-width: 850px
+) {
+
+  .resumo-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .proximo-passo {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+  }
+
+
+  .proximo-acoes {
+    width: 100%;
+  }
+
+
+  .proximo-acoes button {
+    width: 100%;
+  }
+
+}
+
+
+@media (
+  max-width: 600px
+) {
+
+  .resultados-header {
+    padding:
+      0
+      20px;
+  }
+
+
+  .resultados-header h1 {
+    font-size: 24px;
+  }
+
+
+  .resultados-main {
+    padding:
+      45px
+      16px;
+  }
+
+
+  .resultados-titulo h2 {
+    font-size: 36px;
+  }
+
+
+  .resumo-evento {
+    padding: 25px 20px;
+  }
+
+
+  .servicos-escolhidos-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .proximo-passo {
+    padding: 28px 22px;
+  }
+
+
+  .proximo-conteudo h2 {
+    font-size: 27px;
+  }
+
+}

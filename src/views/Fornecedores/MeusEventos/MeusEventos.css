@@ -1,0 +1,655 @@
+/* =========================================
+   PÁGINA
+========================================= */
+
+.meus-eventos-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(183, 134, 55, 0.12),
+      transparent 30%
+    ),
+    #0d0d0d;
+
+  color: #f5f1e8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  padding-bottom: 60px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.meus-eventos-header {
+  width: 100%;
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid
+    rgba(201, 164, 93, 0.2);
+
+  background:
+    rgba(13, 13, 13, 0.92);
+}
+
+
+.meus-eventos-logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+.meus-eventos-logo h1 {
+  margin: 0;
+
+  color: #d6b56f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 28px;
+
+  letter-spacing: 1px;
+}
+
+
+.meus-eventos-logo span {
+  color: #8e8780;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  border-left:
+    1px solid
+    rgba(214, 181, 111, 0.3);
+
+  padding-left: 18px;
+}
+
+
+.meus-eventos-voltar-header {
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.5);
+
+  color: #e7d6ad;
+
+  padding: 10px 18px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.meus-eventos-voltar-header:hover {
+  background: #d6b56f;
+
+  color: #17120a;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.meus-eventos-main {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 65px 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOPO
+========================================= */
+
+.meus-eventos-topo {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+
+.meus-eventos-tag {
+  color: #cba85f;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  font-weight: bold;
+}
+
+
+.meus-eventos-topo h2 {
+  margin: 14px 0 12px;
+
+  color: #f3ead8;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+
+.meus-eventos-topo p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: #a9a19a;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   RESUMO
+========================================= */
+
+.eventos-resumo {
+  min-width: 190px;
+
+  padding: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  background:
+    rgba(28, 24, 23, 0.95);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.25);
+
+  border-radius: 12px;
+}
+
+
+.eventos-resumo strong {
+  color: #d6b56f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 34px;
+}
+
+
+.eventos-resumo span {
+  margin-top: 5px;
+
+  color: #9e958c;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.eventos-filtros {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 28px;
+}
+
+
+.eventos-filtros button {
+  background: transparent;
+
+  border:
+    1px solid
+    #403a36;
+
+  border-radius: 6px;
+
+  color: #bdb4aa;
+
+  padding: 10px 17px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.eventos-filtros button:hover {
+  border-color: #d6b56f;
+
+  color: #d6b56f;
+}
+
+
+.eventos-filtros .filtro-ativo {
+  background: #d6b56f;
+
+  color: #17120a;
+
+  border-color: #d6b56f;
+
+  font-weight: bold;
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.eventos-lista {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.evento-fornecedor-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 25px;
+
+  background:
+    rgba(28, 24, 23, 0.95);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.18);
+
+  border-radius: 14px;
+
+  transition: 0.3s;
+}
+
+
+.evento-fornecedor-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(214, 181, 111, 0.5);
+
+  box-shadow:
+    0
+    15px
+    40px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   ÍCONE
+========================================= */
+
+.evento-fornecedor-icone {
+  width: 55px;
+  height: 55px;
+
+  min-width: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  background:
+    rgba(214, 181, 111, 0.1);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.25);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.evento-fornecedor-info {
+  flex: 1;
+}
+
+
+.evento-card-topo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+
+.evento-tipo {
+  color: #d6b56f;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  font-weight: bold;
+}
+
+
+.evento-status {
+  color: #8fd19e;
+
+  font-size: 11px;
+
+  padding: 5px 9px;
+
+  background:
+    rgba(80, 150, 95, 0.1);
+
+  border-radius: 20px;
+}
+
+
+.evento-fornecedor-info h3 {
+  margin: 0 0 8px;
+
+  color: #f3ead8;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+
+.evento-servico {
+  margin: 0 0 15px;
+
+  color: #a9a19a;
+
+  font-size: 13px;
+}
+
+
+.evento-servico strong {
+  color: #d6b56f;
+}
+
+
+.evento-detalhes {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+
+.evento-detalhes span {
+  color: #9e958c;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.botao-ver-evento {
+  white-space: nowrap;
+
+  background: #d6b56f;
+
+  border: none;
+
+  color: #17120a;
+
+  padding: 12px 18px;
+
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.botao-ver-evento:hover {
+  background: #ebcd8c;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================
+   INFORMAÇÃO FINAL
+========================================= */
+
+.eventos-info {
+  margin-top: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 28px;
+
+  background:
+    rgba(214, 181, 111, 0.06);
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.2);
+
+  border-radius: 14px;
+}
+
+
+.eventos-info > div:first-child {
+  color: #d6b56f;
+
+  font-size: 28px;
+}
+
+
+.eventos-info > div:nth-child(2) {
+  flex: 1;
+}
+
+
+.eventos-info h3 {
+  margin: 0 0 8px;
+
+  color: #f3ead8;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+
+.eventos-info p {
+  margin: 0;
+
+  color: #a9a19a;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+.eventos-info button {
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(214, 181, 111, 0.5);
+
+  border-radius: 7px;
+
+  color: #d6b56f;
+
+  padding: 11px 16px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.eventos-info button:hover {
+  background: #d6b56f;
+
+  color: #17120a;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .meus-eventos-header {
+    padding: 0 20px;
+  }
+
+
+  .meus-eventos-logo span {
+    display: none;
+  }
+
+
+  .meus-eventos-topo {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .eventos-resumo {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  .evento-fornecedor-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .botao-ver-evento {
+    width: 100%;
+  }
+
+
+  .eventos-info {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .meus-eventos-main {
+    padding: 40px 18px;
+  }
+
+
+  .meus-eventos-topo h2 {
+    font-size: 32px;
+  }
+
+
+  .evento-detalhes {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+
+  .eventos-info button {
+    width: 100%;
+  }
+
+}

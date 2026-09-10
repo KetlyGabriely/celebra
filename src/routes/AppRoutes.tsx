@@ -4,8 +4,9 @@ import {
   Route,
 } from "react-router-dom";
 
-import Login from "../views/Login/Login";
+// APRESENTAÇÃO E LOGIN
 import PaginaApresentacao from "../views/PaginaApresentacao/PaginaApresentação";
+import Login from "../views/Login/Login";
 
 import RotaProtegida from "./RotaProtegida";
 
@@ -15,15 +16,19 @@ import CadastroCliente from "../views/Cadastro/CadastroCliente";
 import CadastroFornecedor from "../views/Cadastro/CadastroFornecedor";
 
 // CLIENTE
-import PaginaInicial from "../views/PaginaInicial/PaginaInicial";
-import MontarEvento from "../views/MontarEvento/MontarEvento";
-import SelecionarServicos from "../views/SelecionarServicos/SelecionarServicos";
-import Resultados from "../views/Resultados/Resultados";
+import PaginaInicial from "../views/Cliente/PaginaInicial/PaginaInicial";
+import MontarEvento from "../views/Cliente/MontarEvento/MontarEvento";
+import SelecionarServicos from "../views/Cliente/SelecionarServicos/SelecionarServicos";
+import Resultados from "../views/Cliente/Resultados/Resultados";
+import MeusEventosCliente from "../views/Cliente/MeusEventosCliente/MeusEventosCliente";
+import PerfilCliente from "../views/Cliente/PerfilCliente/PerfilCliente";
 
 // FORNECEDOR
-import InicioFornecedor from "../views/InicioFornecedor/InicioFornecedor";
-import MeusServicos from "../views/MeusServicos/MeusServicos";
-import CadastrarServico from "../views/CadastrarServico/CadastrarServico";
+import InicioFornecedor from "../views/Fornecedores/InicioFornecedor/InicioFornecedor";
+import MeusServicos from "../views/Fornecedores/MeusServicos/MeusServicos";
+import CadastrarServico from "../views/Fornecedores/CadastrarServico/CadastrarServico";
+import MeusEventos from "../views/Fornecedores/MeusEventos/MeusEventos";
+import PerfilFornecedor from "../views/Fornecedores/PerfilFornecedor/PerfilFornecedor";
 
 
 export default function AppRoutes() {
@@ -34,17 +39,29 @@ export default function AppRoutes() {
 
       <Routes>
 
+        {/* =========================
+            PÁGINA DE APRESENTAÇÃO
+        ========================= */}
+
         <Route
           path="/"
           element={<PaginaApresentacao />}
         />
+
+
+        {/* =========================
+            LOGIN
+        ========================= */}
 
         <Route
           path="/login"
           element={<Login />}
         />
 
-        {/* CADASTRO */}
+
+        {/* =========================
+            CADASTRO
+        ========================= */}
 
         <Route
           path="/cadastro"
@@ -62,7 +79,9 @@ export default function AppRoutes() {
         />
 
 
-        {/* ÁREA DO CLIENTE */}
+        {/* =========================
+            ÁREA DO CLIENTE
+        ========================= */}
 
         <Route
           path="/inicio"
@@ -101,7 +120,9 @@ export default function AppRoutes() {
         />
 
 
-        {/* ÁREA DO FORNECEDOR */}
+        {/* =========================
+            ÁREA DO FORNECEDOR
+        ========================= */}
 
         <Route
           path="/inicio-fornecedor"
@@ -130,12 +151,38 @@ export default function AppRoutes() {
           }
         />
 
+        <Route
+          path="/meus-eventos"
+          element={
+            <RotaProtegida>
+              <MeusEventos />
+            </RotaProtegida>
+          }
+        />
 
-        {/* ROTA NÃO ENCONTRADA */}
+        <Route
+          path="/perfil-fornecedor"
+          element={<PerfilFornecedor />}
+        />
+
+        <Route
+          path="/meus-eventos-cliente"
+          element={<MeusEventosCliente />}
+        />
+
+        <Route
+          path="/perfil"
+          element={<PerfilCliente />}
+        />
+
+
+        {/* =========================
+            ROTA NÃO ENCONTRADA
+        ========================= */}
 
         <Route
           path="*"
-          element={<Login />}
+          element={<PaginaApresentacao />}
         />
 
       </Routes>
